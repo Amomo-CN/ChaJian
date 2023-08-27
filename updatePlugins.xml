@@ -14,7 +14,7 @@
   url-下载插件JAR/ZIP文件的路径。必需。必须是HTTPS
   version-此插件的版本。必需。必须与plugin.xml中的＜version＞匹配
   -->
---   <plugin id="com.nasller.CodeGlancePro" url="https://plugins.jetbrains.com/files/18824/381719/CodeGlance_Pro-1.7.5-nightly-2023-08-23T18-25-signed.zip?updateId=381719&pluginId=18824&family=INTELLIJ" version="1.7.5">
+<!--  <plugin id="com.nasller.CodeGlancePro" url="https://plugins.jetbrains.com/files/18824/381719/CodeGlance_Pro-1.7.5-nightly-2023-08-23T18-25-signed.zip?updateId=381719&pluginId=18824&family=INTELLIJ" version="1.7.5">  -->
   <plugin id="com.dongbao.dhgAuthorityPlugin" 
         url="http://192.168.2.178:81/dhg-authority-plugin-0.0.8.zip"
         version="0.0.8">
