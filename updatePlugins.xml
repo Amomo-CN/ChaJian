@@ -1,24 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  The <plugins> element contains the description of the plugins available at this repository. Required.
-  ＜plugins＞元素包含此存储库中可用插件的描述。必需。
+The <plugins> element (required) contains the description of the plugins
+available at this repository.
 -->
 <plugins>
   <!--
-    Each <plugin> element describes one plugin in the repository. Required.
-    id - used by JetBrains IDEs to uniquely identify a plugin. Required. Must match <id> in plugin.xml
-    url - path to download the plugin JAR/ZIP file. Required. Must be HTTPS
-    version - version of this plugin. Required. Must match <version> in plugin.xml
-  每个＜plugin＞元素描述存储库中的一个插件。必需。
-  id-JetBrains IDE用来唯一标识插件。必需。必须与plugin.xml中的＜id＞匹配
-  url-下载插件JAR/ZIP文件的路径。必需。必须是HTTPS
-  version-此插件的版本。必需。必须与plugin.xml中的＜version＞匹配
+  Each <plugin> element (required) describes one plugin in the repository.
+  Attributes:
+   - "id" (required) - used by JetBrains IDEs to uniquely identify
+     a plugin. Must match <id> in the plugin.xml file.
+   - "url" (required) - URL to download the plugin JAR/ZIP file.
+     Must be HTTPS.
+   - "version" (required) - version of this plugin. Must match <version>
+     in the plugin.xml file.
   -->
-<!--  <plugin id="com.nasller.CodeGlancePro" url="https://plugins.jetbrains.com/files/18824/381719/CodeGlance_Pro-1.7.5-nightly-2023-08-23T18-25-signed.zip?updateId=381719&pluginId=18824&family=INTELLIJ" version="1.7.5">  -->
-  <plugin id="com.dongbao.dhgAuthorityPlugin" 
-        url="http://192.168.2.178:81/dhg-authority-plugin-0.0.8.zip"
-        version="0.0.8">
-
-    <idea-version since-build="202.2" until-build="214.7" />
+  <plugin
+      id="fully.qualified.id.of.this.plugin"
+      url="https://mycompany.example.com/my_repo/my_plugin.jar"
+      version="major.minor.update">
+    <!--
+    The <idea-version> element (required) must match the same element
+    in the plugin.xml file.
+    -->
+    <idea-version since-build="181.3" until-build="191.*"/>
   </plugin>
+  <plugin
+      id="id.of.different.plugin"
+      url="https://othercompany.example.com/other_repo/other_plugin.jar"
+      version="major.minor">
+    <idea-version since-build="181.3" until-build="191.*"/>
+  </plugin>
+  <!-- And so on for other plugins... -->
 </plugins>
